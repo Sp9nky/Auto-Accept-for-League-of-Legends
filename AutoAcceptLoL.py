@@ -39,7 +39,7 @@ while True:
     try:
         acc = \
             pyautogui.locateOnScreen(
-                'accept.PNG',
+                'path/to/png',
                 confidence=.7
             )
         acc_co = pyautogui.center(acc)
