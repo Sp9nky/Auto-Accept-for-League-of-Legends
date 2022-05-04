@@ -16,7 +16,8 @@ import cv2
                                                   
 """
 
-def addStartup(): 
+# this will add the file to the startup registry, comment if you do not need it
+def addStartup():  
     fp = os.path.dirname(os.path.realpath(__file__))
     file_name = sys.argv[0].split('\\')[-1]
     new_file_path = fp + '\\' + file_name
@@ -25,23 +26,16 @@ def addStartup():
     SetValueEx(key2change, 'AutoAccceptLoL', 0, REG_SZ,
                new_file_path)
 
-def Hide():
-    import win32console
-    import win32gui
-    win = win32console.GetConsoleWindow()
-    win32gui.ShowWindow(win, 0)
-
 addStartup()
 
-Hide()
-
+# this is the actual program
 while True:
     try:
         acc = \
             pyautogui.locateOnScreen(
-                'path/to/png',
+                'C:/Users/Sp9nk/Documents/auto accept python/accept.png',
                 confidence=.7
-            )
+                )
         acc_co = pyautogui.center(acc)
         x,y = acc_co.x, acc_co.y
         pyautogui.moveTo(x,y)
